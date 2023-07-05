@@ -1,0 +1,44 @@
+1. s_new = s[::-1]
+
+2. if s==s[::-1]:
+      return True
+
+3. return max(l)
+
+4. def countX(lst, x):
+    return lst.count(x)
+
+5. sort(l)
+    print(l[-2])
+
+
+6. res = [*set(l)]
+
+
+7. def fact(x):
+      if(x<=1):
+          return 1
+      return x*fact(x-1)
+
+8. def prime(x):
+      for i in range(math.sqrt(x)):
+          if(x%i==0):
+              return false
+      return true
+
+9. sort(l)
+
+10. sum(l)
+
+11. def common_member(a, b):   
+    a_set = set(a)
+    b_set = set(b)
+     
+    # check length
+    if len(a_set.intersection(b_set)) > 0:
+        return(a_set.intersection(b_set)) 
+    else:
+        return("no common elements")
+
+12. 
+      
