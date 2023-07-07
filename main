@@ -40,5 +40,117 @@
     else:
         return("no common elements")
 
-12. 
-      
+12. freq1 = [0]*26
+freq2 = [0]*26
+s="rukaiyaaaa"
+p = "sarthakkk"
+for i in range(len(s)):
+    freq1[ord(s[i])-ord('a')]+=1
+for i in range(len(p)):
+    freq2[ord(p[i])-ord('a')]+=1
+if(freq1==freq2):
+    print("Anagrams ")
+else:
+    print("Not anagrams")
+
+13. def permute(a, l, r):
+    if l == r:
+        print (toString(a))
+    else:
+        for i in range(l, r + 1):
+            a[l], a[i] = a[i], a[l]
+            permute(a, l + 1, r)
+ 
+            # backtrack
+            a[l], a[i] = a[i], a[l]
+
+14.n = 8
+i=0
+n1,n2=0,1
+while(i<n):
+    print(n1,end="")
+    nth = n1+n2
+    n1=n2
+    n2=nth
+    i+=1
+
+15. n = len(l)
+    if n%2==0:
+      return ((l[n/2]+l[n/2+1])/2)
+    else:
+      return l[n/2]
+
+16. for i in range(len(l)):
+      if(l[i]<l[i+1]):
+            return false
+     return true
+
+17. def intersection(lst1, lst2):
+     temp = set(lst2)
+     lst3 = [value for value in lst1 if value in temp]
+     return lst3
+
+18. curr,lenn=0
+for i in l1:
+    curr+=i
+    if curr<0:
+        curr=0
+    lenn=max(lenn,curr)
+
+19. i = ""
+s = "Rukaiyaaaaaaah"
+for c in range(len(s)):
+    if (s[c]!="a") & (s[c]!="e") & (s[c]!= "i" )& (s[c]!="o") & (s[c]!="u"):
+        i+=s[c]
+        
+print(i)
+
+20. def reverse_word(s, start, end):
+    while start < end:
+        s[start], s[end] = s[end], s[start]
+        start = start + 1
+        end -= 1
+while True:
+    try:
+        end = s.index(' ', start)
+        reverse_word(s, start, end - 1)
+        start = end + 1
+    except ValueError:
+      reverse_word(s, start, len(s) - 1)
+        break
+
+22. def firstNonRepeating(Str):
+    arr = [[] for i in range(NO_OF_CHARS)]
+    for i in range(NO_OF_CHARS):
+        arr[i] = [0, 0]
+    for i in range(len(Str)):
+        arr[ord(Str[i])][0] += 1
+        arr[ord(Str[i])][1] = i
+    res = sys.maxsize
+    for i in range(NO_OF_CHARS):
+         if (arr[i][0] == 1):
+            res = min(res, arr[i][1])
+    return res
+
+23.import math
+def primeFactors(n):
+    while n % 2 == 0:
+        print 2,
+        n = n / 2
+    for i in range(3,int(math.sqrt(n))+1,2):
+        while n % i== 0:
+            print i,
+            n = n / i
+      if n > 2:
+        print n
+
+24.import math as m
+x=8
+n = m.log2(x)
+print(n)
+if m.floor(n)==n:
+    print("Power of 2")
+else:
+    print("Noo")
+
+25. 
